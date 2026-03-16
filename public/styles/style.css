@@ -1,0 +1,249 @@
+/* Adicionar aqui toda a estilização criada para sua aplicação. */
+:root {
+    --rosa: #F21667;
+    --vinho: #8C205C;
+    --azul-marinho: #1E2940;
+    --azul-escuro: #2D4859;
+    --azul: #49808C;
+    --azul-claro: #65B6BF;
+    --preto: #0D0D0D;
+    --branco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #ED145B, #457587, #304C62, #ED145B);
+    color: var(--branco);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header, .banner, .social, .footer, .card, .simulador {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.box {
+    animation: fadeIn 0.7s ease-in-out;
+    animation-delay: 0.2s;
+}
+
+.header {
+    display: flex;
+    position: sticky;
+    background-color: #0d0d0dea;
+    padding: 20px;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.social{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow: visible;
+}
+
+.aqua-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aqua-img img{
+    border-radius: 6px;
+    padding-inline: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: var(--azul-claro);
+    filter: brightness(1.1);
+    box-shadow: 0 0 20px rgba(120, 239, 255, 0.3);
+}
+
+.titulo {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: var(--rosa);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.banner {
+    position: relative;
+    margin: 40px;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 50px;
+    border-radius: 6px;
+    color: var(--rosa);
+    text-shadow: #F21667 1px 0 10px;
+    transition: all 0.3s ease;
+}
+
+.banner:hover {
+    transform: scale(1.1) rotateY(30deg);
+    background-color: #0d0d0d1c;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.boxes{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: 0.3s ease;
+}
+
+.box{
+    max-width: 50%;
+    min-height: 250px;
+    border: none;
+    border-radius: 6px;
+    padding: 50px;
+    margin-bottom: 50px;
+    background-color: var(--azul-marinho);
+    transition: 0.3s ease;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+
+.box:hover{
+    transition: 0.3s ease;
+    transform: scale(1.02);
+    max-width: 100%;
+    background-color: rgba(30, 41, 64, 0.7);
+    backdrop-filter: blur(5px);
+    filter: brightness(1.1);
+}
+
+.box h4{
+    font-size: 36px;
+    color: var(--rosa);
+    margin-bottom: 20px;
+    filter: brightness(1.1);
+}
+
+.footer {
+    background-color: var(--preto);
+}
+
+.simulador{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.simulador h2{
+    color: var(--rosa);
+    margin-bottom: 100px;
+}
+.simulador div{
+    background-color: #0D0D0D;
+    max-width: 50%;
+    height: 70vh;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.simulador p{
+    margin: 20px;
+}
+
+.login{
+    min-height: 100vh;
+}
+
+.card {
+    border: solid 1px #ffffff23;
+    padding: 50px;
+    border-radius: 8px;
+    background-color: var(--preto);
+    margin: 75px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card h2{
+    margin-bottom: 30px;
+    color: var(--rosa);
+}
+
+.campo input{
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 250px;
+    margin: 10px;
+    border: solid 2px var(--vinho);
+    border-radius: 6px;
+    font-weight: bold;
+    color: var(--rosa);
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+.campo input:hover{
+    transform: scale(1.02);
+}
+
+.campo input:active {
+    background-color: #0d0d0d3f;
+}
+
+.botao{
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    min-width: 100px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    color: #fff;
+    font-weight: bolder;
+    text-transform: uppercase;
+    background-color: var(--vinho);
+    transition: all 0.2s ease;
+}
+
+.botao:hover{
+    transform: translateY(-3px) scale(1.01);
+    background-color: var(--rosa);
+}
+
+.botao:active{
+    transform: translateY(3px) scale(1);
+}
